@@ -38,6 +38,7 @@ body {
 #screen {
 	position: absolute;
 	width: 100%;
+  top: 25%;
 	height: 75%;
 	cursor: pointer;
 	z-index: 0;
@@ -54,7 +55,7 @@ body {
 
 .container{
 	position: absolute;
-	top: 75%;
+	bottom: 75%;
 	height: 25%;
 	width: 100%;
 	margin: 0 auto;
@@ -623,9 +624,7 @@ select img{
 </head>
 <body>
 
-<div class="offright">
-	<canvas id="screen">HTML5 CANVAS 3D Drawing demo</canvas>
-</div>
+
 
 <div class="container">
     <div id="apiswf"></div>
@@ -742,7 +741,9 @@ select img{
 		</div>
 	</div>
 </div>
-
+<div class="offright">
+	<canvas id="screen">HTML5 CANVAS 3D Drawing demo</canvas>
+</div>
 
 <script type="text/javascript">
 
