@@ -27,6 +27,10 @@ html {
 	-ms-touch-action: none;
 	-ms-content-zooming: none;
 }
+html *{
+  font-family: "Arial Bold", sans-serif;
+  font-weight: bold;
+}
 body {
 	position: absolute;
 	margin: 0;
@@ -51,8 +55,6 @@ body {
 	z-index: 2;
 }
 
-
-
 .container{
 	position: absolute;
 	bottom: 75%;
@@ -66,6 +68,10 @@ body {
 }
 #undo_drawing,#save_drawing,#clear_drawing,#load_drawing,#pause_drawing,#clickme{
 	display: block;
+  padding: 7px;
+  margin: 6px 0;
+  /*border-radius: 2px;*/
+  -webkit-appearance: none;
 }
 #artist_name,#upbeat,#chill,{
 	display: block;
@@ -73,7 +79,7 @@ body {
 #well,#album-art,#controls,.options,#directions,.pace,
 /*#upbeat,#chill,*/
 /*#audio-info,#audio-controls,*/
-#audio-footer,#track-time,#mute,#art_search, #log{
+#audio-footer,#track-time,#mute,#art_search, #log,#logo{
 	display: inline-block;
 
 }
@@ -102,15 +108,15 @@ input[type="text"]{
 button,select{
 	text-decoration: none;
 	border: none;
-	background-color: #4d4d4d;
+	background-color: #ebebeb;
 	color: white;
 }
 
 select{
-   	padding: 5px;
-   	width: 100px;
-   	border: 1px solid #4d4d4d;
-   	border-radius: 2px;
+   	padding: 5px 15px 5px 5px;
+   	/*width: 100px;*/
+   	border: 1px solid #ebebeb;
+   	/*border-radius: 2px;*/
    	-webkit-appearance: none;
    	background: url(img/dropdown.png) no-repeat 90% #4d4d4d;
 }
@@ -120,8 +126,9 @@ select img{
 
 #audio-info,#song-title,#artist-name,#audio-controls,#pause,#next{
 	display: block;
+  float:left;
 }
-#art_search,#controls,#audio-footer,.pace,.options{
+#art_search,#controls,#audio-footer,.pace{
 	padding-left: 2.5%;
 	padding-right: 5px;
 }
@@ -170,13 +177,37 @@ select img{
 	height: 50%;
 	overflow: scroll;
 }*/
+.options {
+  width: 95%;
+  margin: 0 auto;
+  padding: 0 2.5%;
+}
 .options *{
   float:left;
 } 
+.options button,.options select {
+  color: #969696;
+  background-color: #ebebeb;
+}
+.options form{
+  margin: 6px 0;
+}
 .options a{
   color:#fff;
 }
-
+#logo img{
+  width: 238px;
+  height: 55.5px;
+}
+#question img{
+  width: 40px;
+  height: 40px;
+}
+#topest {
+  margin: 0 auto;
+  width: 95%;
+  padding: 0 2.5%;
+}
 </style>
 
 <script src="js/ge1doot.js"></script>
@@ -633,53 +664,54 @@ select img{
   <div id="song-table"></div>
     
 	<div class="well">
+    <div id="topest">
+      <div id="logo">
+        <img src="img/logo.png" />
+      </div>
+      <div id="art_search">
+        <input title="Enter an artist name" type="text"  id="artist_name" class="tip" onclick="searchClicked()" onkeydown="if (event.keyCode == 13) newArtist()" name="artist" value='Enter artist name'/>
 
-		<div id="art_search">
-			<input title="Enter an artist name" type="text"  id="artist_name" class="tip" onclick="searchClicked()" onkeydown="if (event.keyCode == 13) newArtist()" name="artist" value='Enter artist name'/>
-
-		    <div id="album-art" title="visit this album at Rdio"> 
-		        <!--<img width="200px" height="200px" alt="masks" src="img/logo.png"/>-->
-		    </div>
-	    </div>
-      
-      <div class="pace">
-	        <img class="mbutton" id="chill" src="img/chill.png" title="immediately plays a chill out song by the current artist">
-	        <p>chillaxed</p>
-	    </div>
-	    <div class="pace">
-	        <img class="mbutton" id="upbeat" src="img/upbeat.png" title="plays a high energy song by the current artist">
-	        <p>upbeat</p>
-	    </div>
-
-	    <div id="controls">
-	        <div id="audio-controls">
-	            <a title="pause/play the music" id="pause" class="button tip">
-	            	<img src="img/play.png" alt="play music">
-	            </a>
-	            <a title="advance to the next track"  id="next" class="button tip">
-	            	<img src="img/skip.png" alt="play music">
-	            </a>
-	            <a class="tip" title="mutes/unmutes the music" id="mute"> 
-	            	<img alt="mute" id="mute_img" src="img/sound.png"/>
-	            </a>
-	        </div>
-	    </div>
-    	<div id="audio-footer">
-        	<div id="audio-info">
-	            <div class="limited-label" title="visit this song at Rdio" id="song-title"> </div>
-	            <div class="limited-label" title="visit this artist at Rdio" id="artist-name"> </div>
-	        </div>
-            <span id="track-time" title="click to reverse the direction of time"> 00:00 </span>
+          <div id="album-art" title="visit this album at Rdio"> 
+              <!--<img width="200px" height="200px" alt="masks" src="img/logo.png"/>-->
+          </div>
+        </div>
+        
+        <div class="pace">
+            <img class="mbutton" id="chill" src="img/chill.png" title="immediately plays a chill out song by the current artist">
+            <p>chillaxed</p>
+        </div>
+        <div class="pace">
+            <img class="mbutton" id="upbeat" src="img/upbeat.png" title="plays a high energy song by the current artist">
+            <p>upbeat</p>
         </div>
 
-        
+        <div id="controls">
+            <div id="audio-controls">
+                <a title="pause/play the music" id="pause" class="button tip">
+                  <img src="img/play.png" alt="play music">
+                </a>
+                <a title="advance to the next track"  id="next" class="button tip">
+                  <img src="img/skip.png" alt="play music">
+                </a>
+                <a class="tip" title="mutes/unmutes the music" id="mute"> 
+                  <img alt="mute" id="mute_img" src="img/sound.png"/>
+                </a>
+            </div>
+        </div>
+        <div id="audio-footer">
+            <div id="audio-info">
+                <div class="limited-label" title="visit this song at Rdio" id="song-title"> </div>
+                <div class="limited-label" title="visit this artist at Rdio" id="artist-name"> </div>
+            </div>
+              <span id="track-time" title="click to reverse the direction of time"> 00:00 </span>
+          </div>
 
-        <div id="log">
-	        <noscript> Sorry! The Bipolar Radio needs JavaScript, but that is not
-	                   enabled in your browser.
-	        </noscript>
-	    </div>
-
+          <div id="log">
+            <noscript> Sorry! The Bipolar Radio needs JavaScript, but that is not
+                       enabled in your browser.
+            </noscript>
+          </div>
+        </div>
 <!-- 		<div id="directions">
 			<button id="clickme">Click meh</button>
 			<button id="pause_drawing">Pause Rotation</button>
@@ -707,7 +739,7 @@ select img{
 		  	</form>
         <form action = "">
             <select id = "filColor">
-              <option>Fill Color</option>
+              <option value = "#FFFFFF" selected>Fill Color</option>
               <option value = "#FFFFFF">White</option>
               <option value = "#FF0000">Red</option>
               <option value = "#FFCC00">Orange</option>
@@ -716,63 +748,32 @@ select img{
               <option value = "#0000FF">Blue</option>
               <option value = "#663366">Indigo</option>
               <option value = "#FF00FF">Violet</option>
-              <option value = "1" selected>Random</option>
+              <option value = "1">Random</option>
             </select>
           </form>
         <form action = "">
 		  		<select id = "selLine">
-            <option>Line Thickness</option>
+            <option selected value="10">Line Thickness</option>
 		   			<option value = "1">Ultra Thin</option>
 		   			<option value = "5">Thin</option>
-		   			<option value = "10" selected>Normal</option>
+		   			<option value = "10" >Normal</option>
 		   			<option value = "15">Thick</option>
 		   			<option value = "20">Dude</option>
 		  		</select>
         </form>
         
-        <button id="clickme">Make GIF</button>
+        <button id="clickme">MAKE GIF</button>
         <div id="response"></div> 
-        <button id="undo_drawing">Undo</button>
-        <button id="save_drawing">Save</button>
-        <button id="clear_drawing">Clear</button>
-        <button id="pause_drawing">Pause</button>
-        <button id="load_drawing">Load</button>
-		  	
+        <button id="undo_drawing">UNDO</button>
+        <button id="save_drawing">SAVE</button>
+        <button id="clear_drawing">CLEAR</button>
+        <button id="pause_drawing">PAUSE</button>
+        <button id="load_drawing">LOAD</button>
+		  	<a href="#" id="question">
+          <img src="img/question.png" />
+        </a>
 		</div>
 
-		<!--<div class="options">  
-			<button id="undo_drawing">Undo Line</button>
-			<button id="clear_drawing">Clear All</button>	
-		  	<form action = "">
-		  		<p>Fill Color</p>
-		  		<select id = "filColor">
-		   			<option value = "#FFFFFF">White</option>
-		   			<option value = "#FF0000">Red</option>
-		   			<option value = "#FFCC00">Orange</option>
-		   			<option value = "#FFFF00">Yellow</option>
-		   			<option value = "#00FF00">Green</option>
-		   			<option value = "#0000FF">Blue</option>
-		   			<option value = "#663366">Indigo</option>
-		   			<option value = "#FF00FF">Violet</option>
-		   			<option value = "1" selected>Random</option>
-		  		</select>
-		  	</form>
-		</div>-->
-
-		<!--<div class="options">
-			<button id="save_drawing">Save Drawing</button>
-			<button id="load_drawing">Load Drawing</button>
-		  	<form action = "">
-		  		<select id = "selLine">
-            <option>Line Thickness</option>
-		   			<option value = "1">Ultra Thin</option>
-		   			<option value = "5">Thin</option>
-		   			<option value = "10" selected>Normal</option>
-		   			<option value = "15">Thick</option>
-		   			<option value = "20">Dude</option>
-		  		</select>
-			</form>
-		</div>-->
 	</div>
 </div>
 
