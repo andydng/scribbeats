@@ -35,7 +35,7 @@ var Log = {
     if (!this.elem) 
       this.elem = document.getElementById('log');
     this.elem.innerHTML = text;
-    this.elem.style.left = (500 - this.elem.offsetWidth / 2) + 'px';
+    // this.elem.style.left = (500 - this.elem.offsetWidth / 2) + 'px';
   }
 };
 
@@ -132,7 +132,7 @@ function fetchArtistByName(name) {
 
 function switchToNewArtist(artist_info) {
     cur_artist_info = artist_info;
-    info("Playing a song by " + artist_info.name);
+    info("<h3>What's Playing?</h3><p>Playing a song by " + artist_info.name + "</p>");
     fetchAllSongs(cur_artist_info, true);
     fetchSimilarArtists(cur_artist_info);
 }
@@ -342,7 +342,7 @@ function playUpbeatSong() {
         cur_artist_info.upbeat_index = cur_artist_info.songs.length - 1;
     }
     var song = cur_artist_info.songs[idx];
-    info("Playing an upbeat song by " + cur_artist_info.name);
+    info("<h3>What's Playing?</h3><p>Playing an upbeat song by " + cur_artist_info.name + "</p>");
     playID(song.id, false);
 }
 
@@ -355,7 +355,7 @@ function playChillSong() {
         cur_artist_info.chill_index = 0;
     }
     var song = cur_artist_info.songs[idx];
-    info("Playing a chilled song by " + cur_artist_info.name);
+    info("<h3>What's Playing?</h3><p>Playing a chilled song by " + cur_artist_info.name + "</p>");
     playID(song.id, false);
 }
 
@@ -363,7 +363,7 @@ function playNormalSong() {
     if (noSongsCheck()) {
         return;
     }
-    info("Playing a normal song by " + cur_artist_info.name);
+    info("<h3>What's Playing?</h3><p>Playing a normal song by " + cur_artist_info.name + "</p>");
     selectSong(cur_artist_info, 0.30, 0.70);
 }
 

@@ -40,12 +40,11 @@ body {
 	overflow: auto;
 	display: inline-block;
 }
-#undo_drawing,#save_drawing,#clear_drawing,#load_drawing,#pause_drawing,#clickme, form{
+
+#undo_drawing,#save_drawing,#clear_drawing,#load_drawing,#pause_drawing,#clickme, form, button{
 	display: inline-block;
-/*	padding: 7px;
-	margin: 6px 0;*/
+	/*	margin: 6px 0;*/
 	text-align: justify;
-  padding: 7px 5px;
   /*border-radius: 2px;*/
   /*-webkit-appearance: none;*/
 }
@@ -67,6 +66,10 @@ body {
 	height: 40px;
 	width: 40px;
 }
+
+#topest,#controls,.options, .options button, .options form{
+	vertical-align: top;
+}
 .pace{
 	text-align: center;
 }
@@ -84,24 +87,13 @@ body {
 	height: 111px;
 	width: 111px
 }
-input[type="text"]{
-	width: 105px;
-	display: block;
-}
-button,select{
-	text-decoration: none;
-	border: none;
-	background-color: #ebebeb;
-	color: white;
-	display: inline-block;
-}
 select{
    	padding: 5px 15px 5px 5px;
    	/*width: 100px;*/
    	border: 1px solid #ebebeb;
    	/*border-radius: 2px;*/
    	-webkit-appearance: none;
-   	background: url(../img/dropdown.png) no-repeat 95% #4d4d4d;
+   	background: url(../img/dropdown.png) no-repeat 90% #4d4d4d;
 }
 select img{
 	margin-right: 5px;
@@ -125,16 +117,54 @@ select img{
 	display: inline-block;
 	text-align: center;
 }
+.options button,.options select {
+  color: #969696;
+  background-color: #ebebeb;
+  display: inline-block;
+}
 #topest {
   margin: 0 auto;
   width: 95%;
   padding: 0 2.5%;
 }
-
-.options button,.options select {
-  color: #969696;
-  background-color: #ebebeb;
-  display: inline-block;
+#logo{
+	vertical-align: top;
+}
+#art_search,.pace,#controls{
+	margin-top: 20px;
+}
+#art_search{
+	vertical-align: 20px;
+}
+input[type="text"]{
+	width: 255px;
+	height: 25px;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+#art_search input[type="text"]{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+#searchartist{
+	margin: 0;
+	padding: 0;
+	width: 30px;
+	height: 29px;	
+	float: left;
+}
+button,select{
+	text-decoration: none;
+	border: none;
+	background-color: #ebebeb;
+	color: white;
+	display: inline-block;
+}
+button {
+  padding: 6px;
 }
 .options a{
   color:#fff;
@@ -149,13 +179,27 @@ select img{
 }
 
 #audio-footer{
-	position: fixed;
+	position: absolute;
 	top: 70%;
 	left: 72.5%;
 
 }
 #log{
-	position: fixed;
+	position: absolute;
 	top: 70%;
-	left: -30%;
+	left: 20%;
+}
+#log h3{
+	font-family: helvetica;
+	font-size: 2em;
+	font-weight: thin;
+	color: #7ccbed;
+}
+#log p{
+	color: grey;
+	margin-top: 20px;
+}
+#audio-footer #track-time, #album-art, #art-search {
+	color: grey;
+	display: inline-block;
 }

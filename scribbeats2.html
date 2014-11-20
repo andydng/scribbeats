@@ -18,7 +18,6 @@
 <script type="text/javascript"> google.load("jquery", "1.4.2"); </script>
 <script type="text/javascript"> google.load("jqueryui", "1.8.6"); </script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
-
 <link type="text/css" href="css/reset.css" rel="stylesheet" />
 <link type="text/css" href="css/scribbles.css" rel="stylesheet" />
 
@@ -482,12 +481,13 @@
 	<div class="well">
     	<div id="topest">
 	      	<div id="logo">
-	        	<img src="img/logo.png" />
+	        	<img src="img/scribbeats.png" />
 	      	</div>
 	      	<div id="art_search">
 	        	<input title="Enter an artist name" type="text"  id="artist_name" class="tip" onclick="searchClicked()" onkeydown="if (event.keyCode == 13) newArtist()" name="artist" placeholder='Enter artist name'/>
 	        	<button id="searchartist" onclick="newArtist()">GO</button>
 	        </div>
+
           	<div class="pace">
 	            <img class="mbutton" id="chill" src="img/chill.png" title="immediately plays a chill out song by the current artist">
 	            <p>chillaxed</p>
@@ -514,7 +514,7 @@
     </div>
 
 	<div class="options">
-		<div class="justice">
+		<!-- <div class="justice"> -->
 			<form action = "">
 		  		<select id = "selColor">
 	        <option>Line Color</option>
@@ -564,6 +564,7 @@
 	      		<img src="img/question.png" />
 	    	</a>
 	    	<div id="response"></div>
+	    <!-- </div> -->
 	</div>
 
 	<div id="log">
@@ -577,12 +578,13 @@
 	        <img width="200px" height="200px" alt="album art" src="img/scribbeats.png"/> 
 	    </div>
 	    <div id="art-search"></div>
+	    <span id="track-time" title="click to reverse the direction of time"> 00:00 </span>
     	<div id="audio-info">
             <div class="limited-label" id="song-title"> </div>
             <div class="limited-label" id="artist-name"> </div>
         </div>
-        <span id="track-time" title="click to reverse the direction of time"> 00:00 </span>
     </div>
+
 </div>
 
 <div class="offright">
