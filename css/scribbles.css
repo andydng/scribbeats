@@ -67,7 +67,7 @@ body {
 	height: 40px;
 	width: 40px;
 }
-#topest,#controls{
+#topest,#controls,.options, .options button, .options form{
 	vertical-align: top;
 }
 
@@ -119,21 +119,28 @@ select img{
 	display: inline-block;
 	text-align: center;
 }
-#topest {
-  margin: 0 auto;
-  width: 95%;
-  padding: 0 2.5%;
-}
-
 .options button,.options select {
   color: #969696;
   background-color: #ebebeb;
   display: inline-block;
 }
-
+#topest {
+  margin: 0 auto;
+  width: 95%;
+  padding: 0 2.5%;
+}
+#logo{
+	vertical-align: top;
+}
+#art_search,.pace,#controls{
+	margin-top: 20px;
+}
+#art_search{
+	vertical-align: 20px;
+}
 input[type="text"]{
 	width: 255px;
-	height: 20px;
+	height: 25px;
 	display: inline-block;
 	margin: 0;
 	padding: 0;
@@ -142,6 +149,14 @@ input[type="text"]{
 	display: inline-block;
 	margin: 0;
 	padding: 0;
+	float: left;
+}
+#searchartist{
+	margin: 0;
+	padding: 0;
+	width: 30px;
+	height: 29px;	
+	float: left;
 }
 button,select{
 	text-decoration: none;
@@ -150,18 +165,8 @@ button,select{
 	color: white;
 	display: inline-block;
 }
-#art_search{
-	
-}
-
-#searchartist{
-	margin: 0;
-	padding: 0;
-	height: 20px;
-}
-
 .options form{
-  margin: 6px 0;
+  /*margin: 6px 0;*/
 }
 .options a{
   color:#fff;
@@ -176,15 +181,15 @@ button,select{
 }
 
 #audio-footer{
-	position: fixed;
+	position: absolute;
 	top: 70%;
 	left: 72.5%;
 
 }
 #log{
-	position: fixed;
+	position: absolute;
 	top: 70%;
-	left: 0;
+	left: ;
 }
 #log h3{
 	font-family: helvetica;
@@ -194,8 +199,9 @@ button,select{
 }
 #log p{
 	color: grey;
+	margin-top: 20px;
 }
-#audio-footer #audio-info, #track-time, #album-art, #art-search {
+#audio-footer #track-time, #album-art, #art-search {
 	color: grey;
 	display: inline-block;
 }
