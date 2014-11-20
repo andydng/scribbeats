@@ -42,18 +42,20 @@ body {
 }
 #undo_drawing,#save_drawing,#clear_drawing,#load_drawing,#pause_drawing,#clickme, #selColor, form{
 	display: inline-block;
-	padding: 7px;
-	margin: 6px 0;
+/*	padding: 7px;
+	margin: 6px 0;*/
+	text-align: justify;
   /*border-radius: 2px;*/
   /*-webkit-appearance: none;*/
 }
 #artist_name,#upbeat,#chill,{
 	display: inline-block;
 }
+
 #well,#album-art,#controls,.options,#directions,.pace,
 /*#upbeat,#chill,*/
 /*#audio-info,#audio-controls,*/
-#audio-footer,#track-time,#mute,#art_search, #log,#logo{
+#audio-footer,#track-time,#mute,#art_search, #log,#logo,#searchartist{
 	display: inline-block;
 
 }
@@ -68,11 +70,15 @@ body {
 .pace{
 	text-align: center;
 }
-.pace #chill, .pace #upbeat{
-	height: 50px;
+.pace p{
+	margin: 0 auto;
+	color: grey;
 }
+/*.pace #chill, .pace #upbeat{
+	height: 50px;
+}*/
 #upbeat,#chill{
-	height: 111px;
+	height: 35px;
 }
 .container img{
 	height: 111px;
@@ -87,6 +93,7 @@ button,select{
 	border: none;
 	background-color: #ebebeb;
 	color: white;
+	display: inline-block;
 }
 
 select{
@@ -95,7 +102,7 @@ select{
    	border: 1px solid #ebebeb;
    	/*border-radius: 2px;*/
    	-webkit-appearance: none;
-   	background: url(img/dropdown.png) no-repeat 90% #4d4d4d;
+   	background: url(../img/dropdown.png) no-repeat 90% #4d4d4d;
 }
 select img{
 	margin-right: 5px;
@@ -113,15 +120,18 @@ select img{
 	padding-right: 5px;
 }
 
-.options {
-  width: 95%;
-  margin: 0 auto;
-  padding: 0 2.5%;
-  display: inline-block;
+.options, .well {
+	width: 100%;
+	margin: 0 auto;
+	display: inline-block;
+	text-align: center;
 }
-/*.options *{
-  float:left;
-} */
+#topest {
+  margin: 0 auto;
+  width: 95%;
+  padding: 0 2.5%;
+}
+
 .options button,.options select {
   color: #969696;
   background-color: #ebebeb;
@@ -141,11 +151,7 @@ select img{
   width: 40px;
   height: 40px;
 }
-#topest {
-  margin: 0 auto;
-  width: 95%;
-  padding: 0 2.5%;
-}
+
 #audio-footer{
 	position: fixed;
 	top: 70%;
