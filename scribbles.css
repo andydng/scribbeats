@@ -18,6 +18,7 @@ body {
 #screen {
 	position: absolute;
 	width: 100%;
+  top: 25%;
 	height: 75%;
 	cursor: pointer;
 	z-index: 0;
@@ -31,6 +32,8 @@ body {
 }
 
 .container{
+	position: absolute;
+	bottom: 75%;
 	height: 25%;
 	width: 100%;
 	margin: 0 auto;
@@ -39,15 +42,15 @@ body {
 	overflow: auto;
 	display: inline-block;
 }
-#undo_drawing,#save_drawing,#clear_drawing,#load_drawing,#pause_drawing,#clickme, #selColor, form{
-	display: inline-block;
-	padding: 7px;
-	margin: 6px 0;
+#undo_drawing,#save_drawing,#clear_drawing,#load_drawing,#pause_drawing,#clickme{
+	display: block;
+  padding: 7px;
+  margin: 6px 0;
   /*border-radius: 2px;*/
-  /*-webkit-appearance: none;*/
+  -webkit-appearance: none;
 }
 #artist_name,#upbeat,#chill,{
-	display: inline-block;
+	display: block;
 }
 #well,#album-art,#controls,.options,#directions,.pace,
 /*#upbeat,#chill,*/
@@ -97,31 +100,70 @@ select img{
 	margin-right: 5px;
 }
 
-#audio-info,#song-title,#artist-name{
+#audio-info,#song-title,#artist-name,#audio-controls,#pause,#next{
 	display: block;
-  /*float:left;*/
-}
-#audio-controls,#pause,#next{
-	display: inline-block;
+  float:left;
 }
 #art_search,#controls,#audio-footer,.pace{
 	padding-left: 2.5%;
 	padding-right: 5px;
 }
+/*#pause img{
+	width: 50px;
+	height: 50px;
+}*/
 
+/*
+     
+      <a title="advance to the next track"  id="next" class="button tip">next</a>
+	        </div>
+	        <div id="audio-footer">
+	            <span id="track-time" title="click to reverse the direction of time"> 00:00 </span>
+	            <a class="tip" title="mutes/unmutes the music" id="mute"> <img alt="mute" id="mute_img" src="img/Sound_Button.png"/></a>
+	        </div>
+	    </div>
+
+        <img class="mbutton" id="chill" src="img/normal.png" title="immediately plays a chill out song by the current artist">
+        <img class="mbutton" id="upbeat" src="img/happy.png" title="plays a high energy song by the current artist">
+
+
+#home {
+    left: 0px;
+    width: 46px;
+    background: url('img_navsprites.gif') 0 0;
+}
+
+#prev {
+    left: 63px;
+    width: 43px;
+    background: url('img_navsprites.gif') -47px 0;
+}
+
+#next {
+    left: 129px;
+    width: 43px;
+    background: url('img_navsprites.gif') -91px 0;
+}*/
+
+/*.containerr{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	width: 50%;
+	height: 50%;
+	overflow: scroll;
+}*/
 .options {
   width: 95%;
   margin: 0 auto;
   padding: 0 2.5%;
-  display: inline-block;
 }
-/*.options *{
+.options *{
   float:left;
-} */
+} 
 .options button,.options select {
   color: #969696;
   background-color: #ebebeb;
-  display: inline-block;
 }
 .options form{
   margin: 6px 0;
@@ -146,7 +188,6 @@ select img{
 	position: fixed;
 	top: 70%;
 	left: 72.5%;
-
 }
 #log{
 	position: fixed;
