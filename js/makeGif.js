@@ -8,7 +8,7 @@ function datGif() {
     var canvas = document.getElementById("screen");
     var context = canvas.getContext('2d');
     var shots  = [];
-    var grabLimit = 25;  // Number of screenshots to take
+    var grabLimit = 2;  // Number of screenshots to take
     var grabRate  = 750; // Miliseconds. 500 = half a second, was 100
     var count     = 0;
     //Quick math:
@@ -29,9 +29,12 @@ function datGif() {
           $("#response").html("Image saved. <a href='uploads/image.gif'>View image</a>");
         });
         //My code below
-        //var newwindow=window.open();
-        //var newdocument=newwindow.document;
-        //newdocument.write('<img src="' +data_url + '"/>\n');/**/
+        var strWindowFeatures = "location=yes,height=570,width=520,scrollbar=yes, status=yes";
+        var URL = "http://localhost/directory/schoolTest/dig4104c/scribbeats-master/gif.html";
+        var win = window.open(URL, "_blank",strWindowFeatures);
+        /*var newwindow=window.open('gif.html');
+        var newdocument=newwindow.document;
+        newdocument.write('<img src="uploads/image.gif"/>\n');*/
         //my code above
     }
 
