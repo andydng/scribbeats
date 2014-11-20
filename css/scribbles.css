@@ -67,6 +67,12 @@ body {
 	height: 40px;
 	width: 40px;
 }
+#topest,#art_search,#controls{
+	vertical-align: top;
+}
+#art_search input[type="text"]{
+	display: inline-block;
+}
 .pace{
 	text-align: center;
 }
