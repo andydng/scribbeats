@@ -690,9 +690,6 @@ select img{
 			<!-- <button id="z_drawing">Change Dimension</button> -->
 		<!-- </div> -->
 		<div class="options">
-			<button id="clickme">Convert to Gif</button>
-      <div id="response"></div> 
-			<button id="pause_drawing">Pause Rotation</button>
 			<form action = "">
 				<!-- <fieldset> -->
 		  		<select id = "selColor">
@@ -708,9 +705,7 @@ select img{
 		   			<option value = "1">Seizure</option>
 		  		</select>
 		  	</form>
-        <button id="undo_drawing">Undo Line</button>
-        <button id="clear_drawing">Clear All</button>	
-          <form action = "">
+        <form action = "">
             <select id = "filColor">
               <option>Fill Color</option>
               <option value = "#FFFFFF">White</option>
@@ -724,6 +719,25 @@ select img{
               <option value = "1" selected>Random</option>
             </select>
           </form>
+        <form action = "">
+		  		<select id = "selLine">
+            <option>Line Thickness</option>
+		   			<option value = "1">Ultra Thin</option>
+		   			<option value = "5">Thin</option>
+		   			<option value = "10" selected>Normal</option>
+		   			<option value = "15">Thick</option>
+		   			<option value = "20">Dude</option>
+		  		</select>
+        </form>
+        
+        <button id="clickme">Make GIF</button>
+        <div id="response"></div> 
+        <button id="undo_drawing">Undo</button>
+        <button id="save_drawing">Save</button>
+        <button id="clear_drawing">Clear</button>
+        <button id="pause_drawing">Pause</button>
+        <button id="load_drawing">Load</button>
+		  	
 		</div>
 
 		<!--<div class="options">  
@@ -745,7 +759,7 @@ select img{
 		  	</form>
 		</div>-->
 
-		<div class="options">
+		<!--<div class="options">
 			<button id="save_drawing">Save Drawing</button>
 			<button id="load_drawing">Load Drawing</button>
 		  	<form action = "">
@@ -758,7 +772,7 @@ select img{
 		   			<option value = "20">Dude</option>
 		  		</select>
 			</form>
-		</div>
+		</div>-->
 	</div>
 </div>
 
