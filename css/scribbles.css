@@ -40,11 +40,12 @@ body {
 	overflow: auto;
 	display: inline-block;
 }
-#undo_drawing,#save_drawing,#clear_drawing,#load_drawing,#pause_drawing,#clickme, #selColor, form{
+#undo_drawing,#save_drawing,#clear_drawing,#load_drawing,#pause_drawing,#clickme, form{
 	display: inline-block;
 /*	padding: 7px;
 	margin: 6px 0;*/
 	text-align: justify;
+  padding: 7px 5px;
   /*border-radius: 2px;*/
   /*-webkit-appearance: none;*/
 }
@@ -57,7 +58,6 @@ body {
 /*#audio-info,#audio-controls,*/
 #audio-footer,#track-time,#mute,#art_search, #log,#logo,#searchartist{
 	display: inline-block;
-
 }
 #pause img,#next img{
 	height: 40px;
@@ -101,7 +101,7 @@ select{
    	border: 1px solid #ebebeb;
    	/*border-radius: 2px;*/
    	-webkit-appearance: none;
-   	background: url(../img/dropdown.png) no-repeat 90% #4d4d4d;
+   	background: url(../img/dropdown.png) no-repeat 95% #4d4d4d;
 }
 select img{
 	margin-right: 5px;
@@ -136,9 +136,6 @@ select img{
   background-color: #ebebeb;
   display: inline-block;
 }
-.options form{
-  margin: 6px 0;
-}
 .options a{
   color:#fff;
 }
@@ -160,5 +157,5 @@ select img{
 #log{
 	position: fixed;
 	top: 70%;
-	left: 2.5%;
+	left: -30%;
 }
