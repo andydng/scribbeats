@@ -67,12 +67,10 @@ body {
 	height: 40px;
 	width: 40px;
 }
-#topest,#art_search,#controls{
+#topest,#controls{
 	vertical-align: top;
 }
-#art_search input[type="text"]{
-	display: inline-block;
-}
+
 .pace{
 	text-align: center;
 }
@@ -89,17 +87,6 @@ body {
 .container img{
 	height: 111px;
 	width: 111px
-}
-input[type="text"]{
-	width: 105px;
-	display: block;
-}
-button,select{
-	text-decoration: none;
-	border: none;
-	background-color: #ebebeb;
-	color: white;
-	display: inline-block;
 }
 
 select{
@@ -143,6 +130,36 @@ select img{
   background-color: #ebebeb;
   display: inline-block;
 }
+
+input[type="text"]{
+	width: 255px;
+	height: 20px;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+#art_search input[type="text"]{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+button,select{
+	text-decoration: none;
+	border: none;
+	background-color: #ebebeb;
+	color: white;
+	display: inline-block;
+}
+#art_search{
+	
+}
+
+#searchartist{
+	margin: 0;
+	padding: 0;
+	height: 20px;
+}
+
 .options form{
   margin: 6px 0;
 }
@@ -167,5 +184,18 @@ select img{
 #log{
 	position: fixed;
 	top: 70%;
-	left: 2.5%;
+	left: 0;
+}
+#log h3{
+	font-family: helvetica;
+	font-size: 2em;
+	font-weight: thin;
+	color: #7ccbed;
+}
+#log p{
+	color: grey;
+}
+#audio-footer #audio-info, #track-time, #album-art, #art-search {
+	color: grey;
+	display: inline-block;
 }
