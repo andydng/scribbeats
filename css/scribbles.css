@@ -1,3 +1,8 @@
+@font-face{
+	font-family: Body;
+	src:url(../fonts/Gotham-Light.otf)
+}
+
 html {
 	overflow: hidden;
 	-ms-touch-action: none;
@@ -224,19 +229,19 @@ button {
 }
 #log{
 	position: absolute;
-	top: 80%;
+	top: 83%;
 	left: 5%;
 	z-index: 3;
 }
 #log h3{
-	font-family: helvetica;
+	font-family: Body;
 	font-size: 2em;
 	font-weight: thin;
 	color: #7ccbed;
 }
 #log p{
 	color: grey;
-	margin-top: 50px;
+	margin-top: 30px;
 	/*vertical-align: bottom;*/
 }
 #audio-footer #album-art, #audio-footer #art-search, #audio-footer #audio-info{
@@ -244,4 +249,28 @@ button {
 }
 #audio-footer #audio-info #song-title, #audio-footer #audio-info #artist-name, #audio-footer #audio-info #track-time{
 	color: grey;
+}
+
+/*QUESTION MARK POP UP TEXT*/
+a#question span {
+    display: none
+}
+a#question span p, a#question span h3{
+    font-family: Body;
+	line-height: 1.5;
+	font-size:12px;
+}
+a#question:hover span {
+    background: #ebebeb;
+    color: #858585;
+    border: #75d0f2 2px solid;
+    padding: 20px;
+    display: block;
+    z-index: 100;
+	right:50px;
+    margin: 10px;
+    width: 300px;
+    position: absolute;
+    text-decoration: none;
+	text-align:left;
 }
