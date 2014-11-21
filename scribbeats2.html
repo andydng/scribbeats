@@ -469,6 +469,15 @@
 	],"length":23,"filled":false,"color":"","fov":506}]
 	);
 </script>
+
+
+<script>
+window.onload = function() {
+    $("#pause_drawing").click(function() {
+     $("#pause_drawing span").html($("#pause_drawing span").html() == 'PAUSE' ? 'PLAY' : 'PAUSE');
+});
+};
+</script>
 </head>
 <body>
 
@@ -558,7 +567,7 @@
 	        <button id="undo_drawing" title="Undo last drawn line">UNDO</button>
 	        <button id="save_drawing" title="Temporarily save your drawing">SAVE</button>
 	        <button id="clear_drawing" title="Erases current drawing">CLEAR</button>
-	        <button id="pause_drawing" title="Pause rotation of drawing">PAUSE</button>
+	        <button id="pause_drawing" title="Pause rotation of drawing"><span>PAUSE</span></button>
 	        <button id="load_drawing" title="Load temporarily saved drawing">LOAD</button>
 		  	<a href="#" id="question" title="What is Scribbeats? 
 		  	Scribbeats is an awesome new tool that allows you to create 3d drawings and convert them into GIFs. While using Scribbeats you’ll get to enjoy an immersive experience. Scribbeats allows you to make cool and unique drawings while listening to the the kind of music that best fits your mood. 
