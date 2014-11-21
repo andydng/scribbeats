@@ -136,6 +136,7 @@ callback_object.playingTrackChanged = function playingTrackChanged(playingTrack,
 
     var url = 'http://rdio.com' + playingTrack['albumUrl'];
     var fullUrl = rdioAffiliateDeepLink +  encodeURIComponent(url);
+    $("#album-art").empty();
     $("#album-art").html("<a href='" + fullUrl +"' target='rdio'><img id='album-art-img' src='"+playingTrack['icon']+"'/></a>");
 
     var can_sample = playingTrack['can_sample'];

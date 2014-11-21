@@ -104,7 +104,10 @@ select img{
 #selColor, #filColor, #selLine{
 	border-radius: 0;
 }
-#audio-info,#song-title,#artist-name{
+#audio-info{
+	display: inline-block;
+}
+#song-title,#artist-name{
 	display: block;
   /*float:left;*/
 }
@@ -201,7 +204,7 @@ button {
 	position: absolute;
 	top: 80%;
 	left: 10%;
-
+	z-index: 3;
 }
 #log h3{
 	font-family: helvetica;
