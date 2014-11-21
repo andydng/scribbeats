@@ -128,6 +128,8 @@ select img{
   	background-color: #ebebeb;
   	display: inline-block;
   	margin-right: 20px;
+  	min-width: 75px;
+  	text-align: center;
 }
 #searchartist{
 	text-align: center;
@@ -168,6 +170,7 @@ input[type="text"]{
 }
 button,select{
 	text-decoration: none;
+	text-align: center;
 	border: none;
 	background-color: #ebebeb;
 	color: white;

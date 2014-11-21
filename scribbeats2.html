@@ -516,7 +516,7 @@
 	<div class="options">
 		<!-- <div class="justice"> -->
 			<form action = "">
-		  		<select id = "selColor">
+		  		<select id = "selColor" title="Change line color of drawing">
 	        		<option>Line Color</option>
 		   			<option value = "#FFFFFF">White</option>
 		   			<option value = "#FF0000">Red</option>
@@ -530,7 +530,7 @@
 		  		</select>
 		  	</form>
 	        <form action = "">
-	            <select id = "filColor">
+	            <select id = "filColor" title="Change fill color of drawing">
 	              <option value = "1" selected>Fill Color</option>
 	              <option value = "#FFFFFF">White</option>
 	              <option value = "#FF0000">Red</option>
@@ -544,7 +544,7 @@
 	            </select>
 	        </form>
 	        <form action = "">
-			  	<select id = "selLine">
+			  	<select id = "selLine" title="Change line thickness">
 	            	<option selected value="10">Line Thickness</option>
 		   			<option value = "1">Ultra Thin</option>
 		   			<option value = "5">Thin</option>
@@ -555,11 +555,11 @@
 	        </form>
 	    
 	        <button id="clickme" title="Click here to convert your drawing into a gif">MAKE GIF</button>
-	        <button id="undo_drawing">UNDO</button>
-	        <button id="save_drawing">SAVE</button>
-	        <button id="clear_drawing">CLEAR</button>
-	        <button id="pause_drawing">PAUSE</button>
-	        <button id="load_drawing">LOAD</button>
+	        <button id="undo_drawing" title="Undo last drawn line">UNDO</button>
+	        <button id="save_drawing" title="Temporarily save your drawing">SAVE</button>
+	        <button id="clear_drawing" title="Erases current drawing">CLEAR</button>
+	        <button id="pause_drawing" title="Pause rotation of drawing">PAUSE</button>
+	        <button id="load_drawing" title="Load temporarily saved drawing">LOAD</button>
 		  	<a href="#" id="question">
 	      		<img src="img/question.png" />
 	    	</a>
