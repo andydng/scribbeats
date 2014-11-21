@@ -40,10 +40,10 @@ body {
 	overflow: auto;
 	display: inline-block;
 }
-#undo_drawing,#save_drawing,#clear_drawing,#load_drawing,#pause_drawing,#clickme, #selColor, form{
+
+#undo_drawing,#save_drawing,#clear_drawing,#load_drawing,#pause_drawing,#clickme, form, button{
 	display: inline-block;
-/*	padding: 7px;
-	margin: 6px 0;*/
+	/*	margin: 6px 0;*/
 	text-align: justify;
   /*border-radius: 2px;*/
   /*-webkit-appearance: none;*/
@@ -57,7 +57,6 @@ body {
 /*#audio-info,#audio-controls,*/
 #audio-footer,#track-time,#mute,#art_search, #log,#logo,#searchartist{
 	display: inline-block;
-
 }
 #pause img,#next img{
 	height: 40px;
@@ -67,10 +66,10 @@ body {
 	height: 40px;
 	width: 40px;
 }
+
 #topest,#controls,.options, .options button, .options form{
 	vertical-align: top;
 }
-
 .pace{
 	text-align: center;
 }
@@ -88,7 +87,6 @@ body {
 	height: 111px;
 	width: 111px
 }
-
 select{
    	padding: 5px 15px 5px 5px;
    	/*width: 100px;*/
@@ -166,8 +164,8 @@ button,select{
 	color: white;
 	display: inline-block;
 }
-.options form{
-  /*margin: 6px 0;*/
+button {
+  padding: 6px;
 }
 .options a{
   color:#fff;
@@ -191,7 +189,7 @@ button,select{
 	position: absolute;
 	top: 80%;
 	left: 10%;
-	/*height: 111px;*/
+
 }
 #log h3{
 	font-family: helvetica;

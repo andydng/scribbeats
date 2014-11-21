@@ -18,6 +18,7 @@
 <script type="text/javascript"> google.load("jquery", "1.4.2"); </script>
 <script type="text/javascript"> google.load("jqueryui", "1.8.6"); </script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+
 <link type="text/css" href="css/reset.css" rel="stylesheet" />
 <link type="text/css" href="css/scribbles.css" rel="stylesheet" />
 
@@ -487,7 +488,6 @@
 	        	<input title="Enter an artist name" type="text"  id="artist_name" class="tip" onclick="searchClicked()" onkeydown="if (event.keyCode == 13) newArtist()" name="artist" placeholder='Enter artist name'/>
 	        	<button id="searchartist" onclick="newArtist()">GO</button>
 	        </div>
-
           	<div class="pace">
 	            <img class="mbutton" id="chill" src="img/chill.png" title="immediately plays a chill out song by the current artist">
 	            <p>chillaxed</p>
@@ -514,7 +514,7 @@
     </div>
 
 	<div class="options">
-		<!-- <div class="justice"> -->
+		<div class="justice">
 			<form action = "">
 		  		<select id = "selColor">
 	        <option>Line Color</option>
@@ -564,7 +564,6 @@
 	      		<img src="img/question.png" />
 	    	</a>
 	    	<div id="response"></div>
-	    <!-- </div> -->
 	</div>
 
 	<div id="log">
@@ -584,7 +583,6 @@
         </div>
         <span id="track-time" title="click to reverse the direction of time"> 00:00 </span>
     </div>
-
 </div>
 
 <div class="offright">
