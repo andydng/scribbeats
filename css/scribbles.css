@@ -67,8 +67,11 @@ body {
 	width: 40px;
 }
 
-#topest,#controls,.options, .options button, .options form{
+#topest,#controls,.options{ 
 	vertical-align: top;
+}
+.options button, .options form{
+	vertical-align: 15px;
 }
 .pace{
 	text-align: center;
@@ -88,17 +91,19 @@ body {
 	width: 111px
 }
 select{
-   	padding: 5px 15px 5px 5px;
+   	padding: 6px 15px 6px 6px;
    	/*width: 100px;*/
    	border: 1px solid #ebebeb;
    	/*border-radius: 2px;*/
    	-webkit-appearance: none;
-   	background: url(../img/dropdown.png) no-repeat 90% #4d4d4d;
+   	background: url(../img/dropdown.png) no-repeat 92.5% #4d4d4d;
 }
 select img{
 	margin-right: 5px;
 }
-
+#selColor, #filColor, #selLine{
+	border-radius: 0;
+}
 #audio-info,#song-title,#artist-name{
 	display: block;
   /*float:left;*/
@@ -114,14 +119,15 @@ select img{
 .options, .well {
 	width: 100%;
 	margin: 0 auto;
-	margin-top: 5px;
+	margin-top: 15px;
 	display: inline-block;
 	text-align: center;
 }
 .options button,.options select {
-  color: #969696;
-  background-color: #ebebeb;
-  display: inline-block;
+  	color: #969696;
+  	background-color: #ebebeb;
+  	display: inline-block;
+  	margin-right: 20px;
 }
 #topest {
   margin: 0 auto;
