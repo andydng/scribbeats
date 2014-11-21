@@ -145,10 +145,14 @@ select img{
   	min-width: 75px;
   	text-align: center;
 }
+button:hover {
+	background-color: #7ccbed;
+	color: white;
+}
 #searchartist{
 	text-align: center;
 	background-color: #7ccbed;
-	color: grey;
+	color: white;
 	cursor: pointer;
 }
 #topest {
