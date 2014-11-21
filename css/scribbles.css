@@ -118,6 +118,7 @@ select img{
 }
 #audio-info{
 	display: inline-block;
+	margin-left:20px;
 }
 #song-title,#artist-name{
 	display: block;
